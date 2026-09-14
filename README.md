@@ -4,6 +4,9 @@ Práctica guiada: construcción de una **API REST CRUD** con [NestJS](https://ne
 
 Este documento está pensado para que un estudiante pueda **replicar la práctica desde cero**, entendiendo el *por qué* de cada paso, no solo el *cómo*.
 
+> 🌐 **API publicada:** [https://semana2-integracion202602.onrender.com](https://semana2-integracion202602.onrender.com/api/v1/productos)
+> 📖 **Documentación interactiva (Swagger):** [https://semana2-integracion202602.onrender.com/swagger](https://semana2-integracion202602.onrender.com/swagger)
+
 ---
 
 ## Tabla de contenidos
@@ -478,7 +481,7 @@ flowchart LR
     GA -- "✅ todo pasó" --> Hook["Render Deploy Hook<br/>(POST autenticado por URL secreta)"]
     Hook --> Build["Render: build<br/>npm ci && npm run build"]
     Build --> Run["Render: runtime<br/>npm run start:prod<br/>escucha en $PORT"]
-    Run --> API[("API pública<br/>https://‹servicio›.onrender.com/api/v1/productos")]
+    Run --> API[("API pública<br/>https://semana2-integracion202602.onrender.com/api/v1/productos")]
     Cliente["Cliente final<br/>(navegador, app, Postman)"] --> API
 ```
 
@@ -582,4 +585,4 @@ npm ci && npm run build
 npm run start:prod
 ```
 
-**Documentación interactiva (Swagger):** `http://localhost:3000/swagger` en local, o `https://<tu-servicio>.onrender.com/swagger` una vez desplegado.
+**Documentación interactiva (Swagger):** `http://localhost:3000/swagger` en local, o [https://semana2-integracion202602.onrender.com/swagger](https://semana2-integracion202602.onrender.com/swagger) en producción.
